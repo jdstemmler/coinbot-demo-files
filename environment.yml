@@ -1,0 +1,15 @@
+name: bonsai
+dependencies:
+- python=3.6
+- pip=19.1.1
+- jupyter=1.0.0
+- matplotlib=3.0.3
+- seaborn=0.9.0
+- plotly=3.10.0
+- scipy=1.3.0
+- pandas=0.25.1
+- numpy=1.16.4
+- pip:
+  - bonsai-cli==0.9.7
+  - bonsai-ai==2.2.7
+  - cufflinks==0.16
