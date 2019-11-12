@@ -112,8 +112,8 @@ class Model:
             }
         
         if self.predict:
-            # config['masscart'] = round(np.random.random() + .5, 3)
-            # config['masspole'] = round(np.random.random() * .1 + .05, 4)
+            config['masscart'] = round(np.random.random() + .5, 3)
+            config['masspole'] = round(np.random.random() * .1 + .05, 4)
             pass
 
         config.update(compute_config_params(config))

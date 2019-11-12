@@ -3,3 +3,5 @@ log/
 .vscode/
 cartpole-workspace.code-workspace
 .ipynb_checkpoints
+.brains
+*.bproj

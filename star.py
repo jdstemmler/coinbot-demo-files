@@ -103,12 +103,16 @@ class Star():
             Reward value
         """
 
-        if not terminal:
-            reward = 1
-        else:
-            reward = 0
+        x_t = self.model.simulator.x_threshold
+        t_t = self.model.simulator.theta_threshold_radians
 
-        return reward
+        ang_rew = ((t_t - abs(self.state['angle']))/t_t)**3
+        add_rew = ((x_t - abs(self.state['position']))/x_t)**3
+    
+        if terminal:
+            return 0
+        else:
+            return ang_rew * add_rew
 
     def simulator_reset_config(self, config=None):
         """Reset simulator configuration
